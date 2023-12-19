@@ -1,6 +1,4 @@
-Flask
-pymongo
 pytest
-textblob
+pymongo
 datetime
 # any other dependencies

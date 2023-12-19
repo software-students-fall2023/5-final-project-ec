@@ -19,6 +19,8 @@ A customer feedback system that collects feedbacks and classifies into positive 
    cd mongodb-database
    python db_setup.py
 
+## Link to images on Docker Hub
+[separate image for each subsystem](https://hub.docker.com/repository/docker/lcverytall/5-final-project-ec/general)
 ## Run the Software
 Make sure to run app.py as a python module to make sure the paths can be retrieved normally
 ```
