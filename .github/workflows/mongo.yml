@@ -1,1 +1,21 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker build -t mongo ./mongodb-database
+
+    - name: Run Docker container
+      run: docker run -d --name mongo mongo
+
+    - name: Run tests in Docker container
+      run: docker exec mongo python tests/test_insert.py
