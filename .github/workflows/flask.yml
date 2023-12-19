@@ -12,7 +12,8 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -t flask-app .
+      
+      run: docker build -t flask-app ./flask-app .
 
     - name: Run Docker container
       run: docker run -d --name flask-app flask-app
