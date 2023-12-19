@@ -13,7 +13,7 @@ jobs:
 
     - name: Build Docker image
       
-      run: docker build -t flask-app ./flask-app .
+      run: docker build -t flask-app ./flask-app
 
     - name: Run Docker container
       run: docker run -d --name flask-app flask-app
