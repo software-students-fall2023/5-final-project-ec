@@ -19,5 +19,5 @@ jobs:
       run: docker run -d --name ml ml
 
     - name: Run tests in Docker container
-      run: docker exec flask-app python tests/test_ml_api.py
+      run: docker exec ml python tests/test_ml_api.py
  
