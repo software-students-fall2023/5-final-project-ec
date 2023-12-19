@@ -1,0 +1,5 @@
+Flask
+pymongo
+pytest
+textblob 
+# any other dependencies
