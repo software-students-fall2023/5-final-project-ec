@@ -20,3 +20,4 @@ jobs:
 
     - name: Run tests in Docker container
       run: docker exec flask-app python tests/test_db.py
+ 
