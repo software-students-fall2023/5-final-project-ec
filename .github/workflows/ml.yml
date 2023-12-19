@@ -16,7 +16,7 @@ jobs:
       run: docker build -t ml ./machine_learning
 
     - name: Run Docker container
-      run: docker run -d --name ml ml
+      run: docker run -d --name app ml
 
     - name: Run tests in Docker container
       run: docker exec ml python tests/test_ml_api.py
