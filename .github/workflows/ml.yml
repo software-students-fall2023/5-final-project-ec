@@ -12,12 +12,10 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build Docker image
-      
       run: docker build -t ml ./machine_learning
 
     - name: Run Docker container
-      run: docker run -d --name app ml
+      run: docker run -d --name mltest ml
 
     - name: Run tests in Docker container
-      run: docker exec ml python tests/test_ml_api.py
- 
+      run: docker exec mltest python tests/test_ml_api.py
