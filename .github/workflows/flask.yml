@@ -19,4 +19,4 @@ jobs:
       run: docker run -d --name flask-app flask-app
 
     - name: Run tests in Docker container
-      run: docker exec flask-app python /tests/test_db.py
+      run: docker exec flask-app python ./tests/test_db.py
