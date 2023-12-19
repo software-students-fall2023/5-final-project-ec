@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div id="branding">
+            <h1><a href="/">Customer Feedback System</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="/feedback">Submit Feedback</a></li>
+                <li><a href="/view-feedback">View Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Submit Your Feedback</h1>
+        <form method="post" action="/feedback" id="feedback-form">
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <footer>
+        <p>Customer Feedback System &copy; 2023</p>
+    </footer>
+</body>
+</html>

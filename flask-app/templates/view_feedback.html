@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        <div class="flash-message">{{ message }}</div>
+    {% endfor %}
+    <header>
+        <div id="branding">
+            <h1><a href="/">Customer Feedback System</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/feedback">Submit Feedback</a></li>
+                <li class="current"><a href="/view-feedback">View Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Customer Feedback</h1>
+        <div class="feedback-list">
+            <h2>Positive Feedback</h2>
+            {% for feedback in positive_feedbacks %}
+                <div class="feedback positive">
+                    <p>{{ feedback.feedback_text }} <span class="timestamp">- {{ feedback.timestamp | datetimeformat }}</span></p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="feedback-list">
+            <h2>Negative Feedback</h2>
+            {% for feedback in negative_feedbacks %}
+                <div class="feedback negative">
+                    <p>{{ feedback.feedback_text }} <span class="timestamp">- {{ feedback.timestamp | datetimeformat }}</span></p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer>
+        <p>Customer Feedback System &copy; 2023</p>
+    </footer>
+</body>
+</html>

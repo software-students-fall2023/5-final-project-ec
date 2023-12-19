@@ -1,0 +1,6 @@
+Flask
+pymongo
+pytest
+textblob
+datetime
+# any other dependencies
