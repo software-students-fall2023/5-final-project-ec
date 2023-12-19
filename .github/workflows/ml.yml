@@ -16,6 +16,8 @@ jobs:
 
     - name: Run Docker container
       run: docker run -d --name mltest ml
+    - name: start container
+      run: docker start mltest
 
     - name: Run tests in Docker container
       run: docker exec mltest python tests/test_ml_api.py
